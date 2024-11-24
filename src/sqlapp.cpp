@@ -2,6 +2,6 @@
 #include <SDL2/SDL.h>
 
 int main(){
-    std::cout << "helloworld" << std::endl;
+    std::cout << "sdl2 app" << std::endl;
     return (0);
 }
