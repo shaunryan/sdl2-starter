@@ -3,6 +3,7 @@
 Template project setup for vscode, clang++ and SDL2 on a mac. Using latest toolchain that is cpp extensions, cmake and presets.
 
 Requires:
+
 - SDL2 to be installed into '/Library/Frameworks/SDL2.framework' as per the installation documentation.
 - CMake installed
 - vscode extension cpp
