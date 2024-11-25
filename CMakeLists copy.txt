@@ -11,15 +11,16 @@ file(GLOB header_dir
      "./headers/*.h"
 )
 
-find_package(SDL2 REQUIRED COMPONENTS SDL2)
-
+set(HEADER_FILES ${header_dir})
+# set(CMAKE_PREFIX_PATH "C:\\frameworks\\SDL2\\x86_64-w64-mingw32")
+# find_package(SDL2 REQUIRED COMPONENTS SDL2)
 
 add_executable(sdlapp ${source_dir} ${header_dir})
-target_link_libraries(sdlapp ${SDL2_LIBRARIES})
-# include_directories(SDL2Test ${SDL2_INCLUDE_DIRS})
-target_include_directories(sdlapp PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/headers")
+# target_link_libraries(sdlapp PRIVATE SDL2::SDL2)
+include_directories()
 
 set_property(TARGET sdlapp PROPERTY CXX_STANDARD 17)
+target_include_directories(sdlapp PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/headers")
 
 
 

@@ -1,7 +1,7 @@
 {
-    "cmake.debugConfig": {
-        "miDebuggerPath": "/usr/bin/lldb"
-    },
+    // "cmake.debugConfig": {
+    //     "miDebuggerPath": "/usr/bin/lldb"
+    // },
     "files.associations": {
         "__bit_reference": "cpp",
         "__hash_table": "cpp",
