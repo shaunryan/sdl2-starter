@@ -7,17 +7,15 @@ enable_testing()
 file(GLOB source_dir
      "./src/*.cpp"
 )
-file(GLOB header_dir
-     "./headers/*.h"
-)
 
-find_package(SDL2 REQUIRED COMPONENTS SDL2)
 
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/headers")
 
 add_executable(sdlapp ${source_dir} ${header_dir})
+find_package(SDL2 REQUIRED COMPONENTS SDL2)
 target_link_libraries(sdlapp ${SDL2_LIBRARIES})
-# include_directories(SDL2Test ${SDL2_INCLUDE_DIRS})
-target_include_directories(sdlapp PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/headers")
+
+
 
 set_property(TARGET sdlapp PROPERTY CXX_STANDARD 17)
 
